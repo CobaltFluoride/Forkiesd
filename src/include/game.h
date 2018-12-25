@@ -15,7 +15,9 @@ private:
 
 	irr::scene::ISceneManager *scenemgr;
 
+	irr::gui::IGUIEnvironment *guienv;
+
 public:
 	Game(int width, int height, irr::video::E_DRIVER_TYPE driverType, bool fullscreen);
-	
+	int addForkie(int x, int y, int z);
 };

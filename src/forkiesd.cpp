@@ -7,6 +7,8 @@
 
 int main(int argc, char **argv)
 {
+	// Set scheme to gtk+ and start setup utility.
+
 	Fl::scheme("gtk+");
 	SetupUI sui{100,100,360,400,"Forkies'd Setup"};
 

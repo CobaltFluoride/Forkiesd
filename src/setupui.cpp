@@ -31,7 +31,7 @@ void startGame_cb(Fl_Widget* widget, void *data)
 			driverType = irr::video::EDT_OPENGL;
 			break;
 		case 1:
-			driverType = irr::video::EDT_SOFTWARE;
+			driverType = irr::video::EDT_BURNINGSVIDEO;
 			break;
 	}
 
@@ -72,6 +72,11 @@ SetupUI::SetupUI(int left, int top, int width, int height, const char *title)
 
 		Fl_Spinner widthSpinner{120, 204, 64, 32, "Width"};
 		Fl_Spinner heightSpinner{198, 204, 64, 32, "Height"};
+		
+		widthSpinner.maximum(10000);
+		heightSpinner.maximum(10000);
+		widthSpinner.minimum(100);
+		heightSpinner.minimum(100);
 		
 		heightSpinner.align(FL_ALIGN_BOTTOM);
 		widthSpinner.align(FL_ALIGN_BOTTOM);
